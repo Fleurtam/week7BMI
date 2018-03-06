@@ -36,7 +36,7 @@ calculateBMI() {
         this.bmiMessage = "Overweight";
       }
       if (this.bmiValue > 30) {
-        this.bmiMessage = "Obese";
+        this.bmiMessage = "Please think about what you eat.";
     }
  }
       ionViewDidLoad() {
