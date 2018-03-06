@@ -22,7 +22,8 @@ export class CalculatorPage {
     this.bmiValue = parseFloat(finalBMI.toFixed(2));
     this.setBMImessage();
  }
-    setBMImessage() {
+    private setBMImessage() {
+
       if (this.bmiValue < 18.5) {
         this.bmiMessage = "Underweight";
       }
