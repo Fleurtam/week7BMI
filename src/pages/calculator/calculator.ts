@@ -9,6 +9,8 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 export class CalculatorPage {
   height: number;
   weight: number;
+  bmiValue: number;
+  bmiMessage: string;
 
   constructor(
     public navCtrl: NavController,
@@ -16,22 +18,22 @@ export class CalculatorPage {
   }
 
     calculateBMI() {
-    let finalBMI = weight / (height / 100 * height / 100);
-    obj.setBMImessage = parseFloat(setBMImessage.toFixed(2));
-    setBMImessage(obj);
+    let finalBMI = this.weight / (this.height / 100 * this.height / 100);
+    this.bmiValue = parseFloat(finalBMI.toFixed(2));
+    this.setBMImessage();
  }
     setBMImessage() {
-      if (obj.calculateBMI < 18.5) {
-        obj.setBMImessage = "Underweight";
+      if (this.bmiValue < 18.5) {
+        this.bmiMessage = "Underweight";
       }
-      if (obj.calculateBMI > 18.5 && obj.calculateBMI < 25) {
-        obj.setBMImessage = "Normal";
+      if (this.bmiValue > 18.5 && this.bmiValue < 25) {
+        this.bmiMessage = "Normal";
       }
-      if (obj.calculateBMI > 25 && obj.calculateBMI < 30) {
-        obj.setBMImessage = "Overweight";
+      if (this.bmiValue > 25 && this.bmiValue < 30) {
+        this.bmiMessage = "Overweight";
       }
-      if (obj.calculateBMI > 30) {
-        obj.setBMImessage = "Obese";
+      if (this.bmiValue > 30) {
+        this.bmiMessage = "Obese";
       }
 
 
