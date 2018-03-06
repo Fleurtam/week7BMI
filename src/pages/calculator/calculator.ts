@@ -27,16 +27,16 @@ calculateBMI() {
 
     private setBMImessage() {
       if (this.bmiValue < 18.5) {
-        this.bmiMessage = "You have an eating disorder. Go get some kebab";
+        this.bmiMessage = "You have an eating disorder. Oskar will happily go with you for some kebab";
       }
       if (this.bmiValue > 18.5 && this.bmiValue < 25) {
-        this.bmiMessage = "Congratulations! You're all good!";
+        this.bmiMessage = "Congratulations! You're all good! Boring stuff";
       }
       if (this.bmiValue > 25 && this.bmiValue < 30) {
         this.bmiMessage = "You're not lost yet but we suggest you go on a diet!";
       }
       if (this.bmiValue > 30) {
-        this.bmiMessage = "Please think about what you eat";
+        this.bmiMessage = "Seriously???";
     }
  }
       ionViewDidLoad() {
