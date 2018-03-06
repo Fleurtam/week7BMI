@@ -27,13 +27,13 @@ calculateBMI() {
 
     private setBMImessage() {
       if (this.bmiValue < 18.5) {
-        this.bmiMessage = "Underweight";
+        this.bmiMessage = "You have an eating disorder";
       }
       if (this.bmiValue > 18.5 && this.bmiValue < 25) {
-        this.bmiMessage = "Normal";
+        this.bmiMessage = "Congratulations! You're all good!";
       }
       if (this.bmiValue > 25 && this.bmiValue < 30) {
-        this.bmiMessage = "Overweight";
+        this.bmiMessage = "You're not lost yet but go on a diet!";
       }
       if (this.bmiValue > 30) {
         this.bmiMessage = "Please think about what you eat.";
