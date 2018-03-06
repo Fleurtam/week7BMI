@@ -16,15 +16,29 @@ export class CalculatorPage {
   }
 
     calculateBMI() {
-        weight / (height / 100 * height / 100);
-  //   // final_bmi = weight / (height / 100 * height / 100)
-    // BMI = weight / (height / 100 * height / 100)
-  // }
+    let finalBMI = weight / (height / 100 * height / 100);
+    obj.setBMImessage = parseFloat(setBMImessage.toFixed(2));
+    setBMImessage(obj);
+ }
+    setBMImessage() {
+      if (obj.calculateBMI < 18.5) {
+        obj.setBMImessage = "Underweight";
+      }
+      if (obj.calculateBMI > 18.5 && obj.calculateBMI < 25) {
+        obj.setBMImessage = "Normal";
+      }
+      if (obj.calculateBMI > 25 && obj.calculateBMI < 30) {
+        obj.setBMImessage = "Overweight";
+      }
+      if (obj.calculateBMI > 30) {
+        obj.setBMImessage = "Obese";
+      }
 
 
+ }
 
-  ionViewDidLoad() {
+   ionViewDidLoad() {
     console.log('ionViewDidLoad CalculatorPage');
-  }
+  };
 
 }
