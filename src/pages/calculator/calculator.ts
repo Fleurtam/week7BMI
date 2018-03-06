@@ -17,13 +17,15 @@ export class CalculatorPage {
     public navParams: NavParams) {
   }
 
-    calculateBMI() {
+calculateBMI() {
+  if (this.weight > 0 && this.height > 0) {
     let finalBMI = this.weight / (this.height / 100 * this.height / 100);
     this.bmiValue = parseFloat(finalBMI.toFixed(2));
     this.setBMImessage();
- }
-    private setBMImessage() {
+    }
+  }
 
+    private setBMImessage() {
       if (this.bmiValue < 18.5) {
         this.bmiMessage = "Underweight";
       }
@@ -35,13 +37,9 @@ export class CalculatorPage {
       }
       if (this.bmiValue > 30) {
         this.bmiMessage = "Obese";
-      }
-
-
+    }
  }
-
-   ionViewDidLoad() {
-    console.log('ionViewDidLoad CalculatorPage');
+      ionViewDidLoad() {
+        console.log('ionViewDidLoad CalculatorPage');
   };
-
 }
